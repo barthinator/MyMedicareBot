@@ -14,7 +14,8 @@ class StringForm extends Component {
   }
 
   //Performs a post method witht he data and then returns it reversed
-  postData() {
+  postData(e) {
+    e.preventDefault();
     var url = '/string';
     var data = {inputString: this.state.inputString};
     return fetch(url, {

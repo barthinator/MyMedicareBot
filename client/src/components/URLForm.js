@@ -49,7 +49,8 @@ class URLForm extends Component {
   }
 
   //This function sends the request to the express server via the /url route
-  submitData() {
+  submitData(e) {
+    e.preventDefault();
 
     //Clears the response state
     this.setState({
